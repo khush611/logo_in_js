@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Static Template</title>
+  </head>
+  <body>
+    <script>
+      const arrStyles = [
+        {
+          top: "200px",
+          left: "100px",
+          width: "200px",
+          height: "220px",
+          borderRadius: "0px 0px 30px 30px"
+        },
+        {
+          top: "190px",
+          left: "40px",
+          width: "50px",
+          height: "180px",
+          borderRadius: "25px 25px 25px 25px"
+        },
+        {
+          top: "190px",
+          left: "310px",
+          width: "50px",
+          height: "180px",
+          borderRadius: "25px 25px 25px 25px"
+        },
+        {
+          top: "320px",
+          left: "130px",
+          width: "50px",
+          height: "180px",
+          borderRadius: "0px 0px 25px 25px"
+        },
+        {
+          top: "320px",
+          left: "220px",
+          width: "50px",
+          height: "180px",
+          borderRadius: "0px 0px 25px 25px"
+        },
+        {
+          top: "90px",
+          left: "100px",
+          width: "200px",
+          height: "100px",
+          borderTopLeftRadius: "100px",
+          borderTopRightRadius: "100px"
+        },
+        {
+          top: "80px",
+          left: "130px",
+          width: "10px",
+          height: "50px",
+          borderRadius: "25px 25px 25px 25px",
+          transform: "rotate(-30deg)"
+        },
+        {
+          top: "80px",
+          left: "260px",
+          width: "10px",
+          height: "50px",
+          borderRadius: "25px 25px 25px 25px",
+          transform: "rotate(30deg)"
+        },
+        {
+          top: "80px",
+          left: "260px",
+          width: "10px",
+          height: "50px",
+          borderRadius: "25px 25px 25px 25px",
+          transform: "rotate(30deg)"
+        },
+        {
+          top: "130px",
+          left: "150px",
+          width: "20px",
+          height: "20px",
+          borderRadius: "50px 50px 50px 50px",
+          backgroundColor: "white"
+        },
+        {
+          top: "130px",
+          left: "230px",
+          width: "20px",
+          height: "20px",
+          borderRadius: "50px 50px 50px 50px",
+          backgroundColor: "white"
+        }
+      ];
+      arrStyles.forEach((style) => createBlock(style));
+      function createBlock(styles) {
+        const block = document.createElement("div");
+        block.style.position = "absolute";
+        block.style.backgroundColor = "#00FF00";
+        for (const key in styles) {
+          block.style[key] = styles[key];
+        }
+        document.body.appendChild(block);
+      }
+    </script>
+  </body>
+</html>
